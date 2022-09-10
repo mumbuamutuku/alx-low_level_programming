@@ -1,3 +1,5 @@
+/* author Mumbua  */
+/* 6 size.c */
 #include <stdio.h>
 /* main -prints size of various types on computer it is compiled and run on */
 /* Return: Always 0 (Success)*/
