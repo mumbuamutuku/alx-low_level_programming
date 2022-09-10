@@ -1,5 +1,5 @@
 #include <stdio.h>
-/* main - prints the size of various types */
+/* main -prints size of various types on computer it is compiled and run on */
 /* Return: Always 0 (Success)*/
 int main(void)
 {
