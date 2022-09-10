@@ -2,9 +2,8 @@
 /* 6 size.c */
 #include <stdio.h>
 /**
-* main -Entry point 
-*
-* Description -prints size of various types on computer it is compiled 
+*main -Entry point 
+*Description -prints size of various types on computer it is compiled 
 *
 * Return: Always 0 (Success)
 */
