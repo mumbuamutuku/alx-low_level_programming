@@ -1,9 +1,13 @@
 /* author Mumbua  */
 /* 6 size.c */
 #include <stdio.h>
-/* main -ENtr point */
-/* Description -prints size of various types on computer it is compiled */
-/* Return: Always 0 (Success)*/
+/**
+* main -Entry point 
+*
+* Description -prints size of various types on computer it is compiled 
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
 int a;
