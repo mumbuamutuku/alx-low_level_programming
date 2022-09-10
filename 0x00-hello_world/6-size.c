@@ -1,7 +1,8 @@
 /* author Mumbua  */
 /* 6 size.c */
 #include <stdio.h>
-/* main -prints size of various types on computer it is compiled and run on */
+/* main -ENtr point */
+/* Description -prints size of various types on computer it is compiled */
 /* Return: Always 0 (Success)*/
 int main(void)
 {
