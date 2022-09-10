@@ -1,6 +1,6 @@
 #include <unistd.h>
 /**
-*Main -entry point
+*main -entry point
 *
 *Description :prints exactly and that piece of art is useful" - 
 *Dora Korpar, 2015-10-19
