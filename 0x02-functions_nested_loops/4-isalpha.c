@@ -4,7 +4,7 @@
  *
  * @c: -the charaacter to be checked
  *
- * Returni: 1 if c is a letter, lowercase or uppercase
+ * Return: 1 if c is a letter, lowercase or uppercase
  *
  * Returns 0 otherwise
  */
