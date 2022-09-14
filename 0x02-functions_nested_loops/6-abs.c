@@ -8,14 +8,8 @@
  */
 int _abs(int h)
 {
-	if (h < 0)
-	{
-		int k = h * -1;
-
-		printf("%d ", k);
-	}
+	if (h >= 0)
+		return (h);
 	else
-	{
-		printf("%d ", h);
-	}
+		return (-n);
 }
