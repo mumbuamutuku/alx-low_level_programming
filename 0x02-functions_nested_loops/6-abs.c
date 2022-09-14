@@ -4,7 +4,7 @@
  *
  * @h: - the integer to be tested
  *
- * Return 0 always
+ * Return: 0 always
  */
 int _abs(int h)
 {
@@ -15,5 +15,7 @@ int _abs(int h)
 		printf("%d ", k);
 	}
 	else
+	{
 		printf("%d ", h);
+	}
 }
