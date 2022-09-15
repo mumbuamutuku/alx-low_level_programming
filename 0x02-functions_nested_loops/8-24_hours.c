@@ -22,3 +22,8 @@ void jack_bauer(void)
 	}
 	_putchar('\n');
 }
+int main(void)
+{
+    jack_bauer();
+    return (0);
+}
