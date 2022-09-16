@@ -2,26 +2,23 @@
 /**
  * print_square - function that prints a square,
  * followed by a new line
- * 
  * @size: is the size of the square
- * 
  * Return: square using  character #
  */
 void print_square(int size)
 {
-    if (size > 0)
-    {
-        for (int i = 0; i < size; i++)
-        {
-            for (int j = 0; j < size; j++)
-            {
-                _putchar('#');
+	int i, j;
 
-            }
-            _putchar('\n');
-            
-        }
-    }
-    else
-        _putchar('\n');
+	if (size > 0)
+	{
+		for (i = 0; i < size; i++)
+		{
+			for (j = 0; j < size; j++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
+	_putchar('\n');
 }
