@@ -2,8 +2,6 @@
 
 /**
  * main - causes an infinite loop
- * description: -infinite loop
- * @\\o/\n: eshjkkkll
  * Return: 0
 */
 
