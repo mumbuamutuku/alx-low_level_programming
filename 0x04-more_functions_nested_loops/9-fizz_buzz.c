@@ -1,12 +1,16 @@
 #include "main.h"
 /**
+ * main - start
  * fizz_buzz -program that prints the numbers from 1 to 100,
+ * main - entry point
  * followed by a new line.
  * Return:  the numbers
  */
-void fizz_buzz(void)
+int main(void)
 {
-	for (int n = 1; n <= 100; n++)
+	int n;
+
+	for (n = 1; n <= 100; n++)
 	{
 		if ((n % 3) == 0 && (n % 5) == 0)
 			printf("FizzBuzz");
@@ -21,9 +25,5 @@ void fizz_buzz(void)
 		printf(" ");
 	}
 	printf("\n");
-}
-int main(void)
-{
-	fizz_buzz();
 	return (0);
 }
