@@ -7,5 +7,5 @@
  */
 int _strlen(char *s)
 {
-	_putchar(strlen(*c) + '0');
+	_putchar(strlen(*s) + '0');
 }
