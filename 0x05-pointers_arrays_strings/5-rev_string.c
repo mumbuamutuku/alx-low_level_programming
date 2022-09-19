@@ -10,15 +10,13 @@ void rev_string(char *s)
 
 	len = strlen(s) - 1;
 
-	char *b_ptr, *e_ptr;
+	char temp;
 
-	b_ptr = s;
-	e_ptr = s;
-
-	for (i = 0; i < len; i++)
-		e_ptr++;
-
-	for (i = len; i >= 0; i++)
-		_putchar(s[i]);
+	for (i = len; i >= len / 2; i--)
+	{
+		temp = s[i];
+		s[i] = s[len - i];
+		s[len - i] = temp;
+	}
 	_putchar('\n');
 }
