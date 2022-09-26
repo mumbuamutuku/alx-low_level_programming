@@ -8,7 +8,8 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int index, count;
+	unsigned int index;
+       unsigned int count = 0;
 	for (index = 0; index < strlen(accept); index++)
 	{
 		if (count == strlen(s))
