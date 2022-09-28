@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * wildcmp -  compares two strings 
+ * match -  compares two strings 
  * @s1: string one
  * @s2: string two
  * Return: 1 if the strings can be considered identical, otherwise return 0.
  */
-int wildcmp(char *s1, char *s2)
+int match(char *s1, char *s2)
 {
         if (*s1 == '\0' && *s2 == '\0')
             return (1);
@@ -24,16 +24,20 @@ int wildcmp(char *s1, char *s2)
             return (0);
         /**
          * If the s1 string contains '?', or current
-         * characters of both strings wildcmp
+         * characters of both strings match
          */
         if (*s1 == '?' || *s1 == *s2)
-            return (wildcmp(s1 + 1, s2 + 1));
+            return (match(s1 + 1, s2 + 1));
         /**
          * If there is *, then there are two possibilities
          * a) We consider current character of second string
          * b) We ignore current character of s2 string.
          */
         if (*s1 == '*')
-            return (wildcmp(s1 + 1, s2) || wildcmp(s1, s2 + 1));
+            return (match(s1 + 1, s2) || match(s1, s2 + 1));
         return (0);
+}
+int wildcmp(char *s1, char *s2)
+{
+    match(s1, s2) ? puts("1") : puts("0")
 }
