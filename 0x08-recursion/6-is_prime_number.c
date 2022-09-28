@@ -1,7 +1,19 @@
 #include "main.h"
-int primeno(int num, int i)
+/**
+ * primeno - get prime number
+ * @n: integer
+ * @i: integer
+ * Return: prime no.
+ */
+int primeno(int i, int num)
 {
-	if
+	if (num == i)
+			return (1);
+	else if (num % i == 0)
+			return (0);
+	else 
+			return primeno(i + 1, num);
+}
 /**
  * is_prime_number - checks prime number
  * @n: integer to check
@@ -10,17 +22,9 @@ int primeno(int num, int i)
 int is_prime_number(int n)
 {
 	static int i = 2;
-	if (n == 0 || n == 1)
-	{
-	       return (0);
-	}
-	if (n == i)
-		return (1);
-	if (n % i == 0)
-	{
-		return (0);
-	}
-	i++;
-	
-	return is_prime_number(n);
+	if (n <= 1)
+		    return (0);
+	if (n >= 2 && n <= 3)
+			return (1);
+	return (primeno(i, n));
 }
