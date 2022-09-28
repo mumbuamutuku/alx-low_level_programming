@@ -23,17 +23,16 @@ int _strlen(char *s)
  * @s: start character
  * @e: end character
  * Return: 1 if true otherwise 0
- */ 
- 
+ */
 int isPalRec(char str[], int s, int e)
 {
-        if (s == e)
-                return (1);
-        if (str[s] != str[e])
-                return (0);
-        if (s < e + 1)
-                return isPalRec(str, s + 1, e - 1);
-        return (1);
+	if (s == e)
+		return (1);
+	if (str[s] != str[e])
+		return (0);
+	if (s < e + 1)
+		return (isPalRec(str, s + 1, e - 1));
+	return (1);
 }
 /**
  * is_palindrome - checks if string is a palindrome
@@ -42,9 +41,9 @@ int isPalRec(char str[], int s, int e)
  */
 int is_palindrome(char *s)
 {
-        int n = _strlen(s);
-        
-        if (n == 0)
-                return (1);
-        return isPalRec(s, 0, n - 1);
+	int n = _strlen(s);
+
+	if (n == 0)
+		return (1);
+	return (isPalRec(s, 0, n - 1));
 }
