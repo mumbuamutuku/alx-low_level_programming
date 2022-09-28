@@ -22,7 +22,7 @@ int primeno(int i, int num)
  */
 int is_prime_number(int n)
 {
-	static int i = 2;
+	int i = 2;
 
 	if (n <= 1)
 		return (0);
