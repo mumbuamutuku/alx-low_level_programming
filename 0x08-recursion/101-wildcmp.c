@@ -39,5 +39,5 @@ int match(char *s1, char *s2)
 }
 int wildcmp(char *s1, char *s2)
 {
-    match(s1, s2) ? puts("1") : puts("0")
+    match(s1, s2) ? puts("1") : puts("0");
 }
