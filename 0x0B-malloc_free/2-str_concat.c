@@ -5,21 +5,37 @@
 char *str_concat(char *s1, char *s2)
 {
     char *str;
-    int i, len = 0;
+    int i, lens1 = 0, j, lens2 = 0;
 
     if (s1 == NULL)
         s1 = "";
     if (s2 == NULL)
         s2 = "";
-    while (s1[i++])
-		len++;
-    for (i = 0; s2[i]; i++)
-		s1[len++] = s2[i];
-	return (s1);
+    /** Get length of s1 **/
 
-    for (i = 0; i < s2[i]; i++)
-        len++;
-    str = (int*)malloc (sizeof(char) * (len + 1));
+    while (s1[lens1] != '\0')
+		lens1++;
+    
+     /** Get length of s2 **/
+    while (s2[lens2] != '\0')
+		lens2++;
+
+    str = malloc(sizeof(s1) * (lens1 + lens2));
+    if (str == NULL)
+        return (NULL);
+    i = 0;
+    while (i < lens1)
+    {
+        str[i] = s1[i];
+        i++;
+    }
+    j = 0;
+    while (j <= lens2)
+    {
+        str[i] = s2[j];
+        i++;
+        j++;
+    } 
 
     return (str);
 }
