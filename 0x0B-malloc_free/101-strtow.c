@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int index = 0, totalwords = 0;
 	int *wordindex = 0;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str == del)
 		return (NULL);
 	
 	while (str[len] != '\0')
@@ -37,7 +37,7 @@ char **strtow(char *str)
 	}
 	for (index = 0; index < totalwords; i++)
 	{
-		return (p[index]);
+		printf("%d\n", p[index]);
 	}
 	return (0);
 	
