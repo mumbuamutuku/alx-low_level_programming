@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 	/** Get length of s2 **/
 	while (s2[lens2] != '\0')
 		lens2++;
-	str = malloc(sizeof(s1) * (lens1 + lens2) + 1);
+	str = malloc(sizeof(s1) * (lens1 + lens2 + 1));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
