@@ -1,12 +1,19 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+int word_len(char *str);
+int count_words(char *str);
+char **strtow(char *str);
+
 /**
- * strtow - unction returns a pointer to an array of strings (words
- * @str: string;
- * Return: NULL if str == NULL or str == ""
+ * word_len - Locates the index marking the end of the
+ *            first word contained within a string.
+ * @str: The string to be searched.
+ *
+ * Return: The index marking the end of the initial word pointed to by str.
  */
-char **strtow(char *str)
+int word_len(char *str)
 {
 	int len = 0, index = 0;
 
@@ -15,23 +22,43 @@ char **strtow(char *str)
         len++;
 		index++;
     }
+	return (len);
+}
+/**
+ * count_words - Counts the number of words contained within a string.
+ * @str: The string to be searched.
+ *
+ * Return: The number of words contained within str.
+ */
+int count_words(char *str)
+{
+	int j = 0, words = 0, wordlen = 0;
 
-    int j = 0, words = 0, wordlen = 0;
-    for (j = 0; *(str + index); j++)
+    for (j = 0; *(str + j); j++)
         wordlen++;
     for (j = 0; j < wordlen; j++)
     {
         if(*(str + j) != ' ')
            {
                words++;
-               j += len + 1;
+               j += word_len(str + j);
            }
     }
-	char **p;
-	int w, m = 0, l;
+	return (words);
+}
+/**
+ * strtow - unction returns a pointer to an array of strings (words
+ * @str: string;
+ * Return: NULL if str == NULL or str == ""
+ */
+char **strtow(char *str)
+{
+    char **p;
+	int w, m = 0, l, words, letters;
 
 	if (str == NULL || str[0] == '\0')
             return (NULL);
+	words = count_words(str);
     if (words == 0)
         return (NULL);
 
@@ -42,7 +69,8 @@ char **strtow(char *str)
     {
         while (str[m] == ' ')
             m++;
-        p[w] = malloc(sizeof(char) * (len + 1));
+		letters = word_len(str + m);
+        p[w] = malloc(sizeof(char) * (letters + 1));
         if (p[w] == NULL)
         {
             for(; w >= 0; w--)
@@ -50,7 +78,7 @@ char **strtow(char *str)
             free(p);
             return (NULL);
         }
-        for(l = 0; l < words; l++)
+        for(l = 0; l < letters; l++)
             p[w][l] = str[m++];
         p[w][l] = '\0';
     }
