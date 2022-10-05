@@ -58,7 +58,7 @@ char **strtow(char *str)
 			if (in_word)
 			{
 				p[words] = malloc(sizeof(char) * (in_word + 1));
-				if (!p[words
+				if (!p[words])
 				{
 					return (NULL);
 				}
