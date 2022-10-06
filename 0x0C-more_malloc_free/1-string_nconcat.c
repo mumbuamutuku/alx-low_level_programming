@@ -4,28 +4,28 @@
  * @s1: Strng one
  * @s2: string two
  * @n: number of bytes
- * Return:  pointer shall point to a newly allocated space in memory, 
+ * Return:  pointer shall point to a newly allocated space in memory,
  * which contains s1, followed by the first n bytes of s2, and null terminated
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len = 0, i = 0;
-    char *p;
+	char *p;
 
-   	if (s1 == NULL)
+	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 	while (s1[i++])
 		len++;
-    	p = malloc(sizeof(char) * (len +1));
+	p = malloc(sizeof(char) * (len + 1));
 	if (p == NULL)
 		return (NULL);
-    len = 0;
-    for (i = 0; s1[i]; i++)
-        p[len++] = s1[i];
+	len = 0;
+	for (i = 0; s1[i]; i++)
+		p[len++] = s1[i];
 	for (i = 0; s2[i] && i < n; i++)
 		p[len++] = s2[i];
-    p[len] = '\0';
+	p[len] = '\0';
 	return (p);
 }
