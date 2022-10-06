@@ -10,7 +10,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len = 0, i = 0;
-    	char *p;
+    char *p;
 
    	if (s1 == NULL)
 		s1 = "";
@@ -21,8 +21,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
     	p = malloc(sizeof(char) * (len +1));
 	if (p == NULL)
 		return (NULL);
+    len = 0;
+    for (i = 0; s1[i]; i++)
+        p[len++] = s1[i];
 	for (i = 0; s2[i] && i < n; i++)
-		s1[len++] = s2[i];
-    	p == s1;
+		p[len++] = s2[i];
+    p[len] = '\0';
 	return (p);
 }
