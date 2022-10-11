@@ -1,12 +1,10 @@
 #include <stdio.h>
 /**
 * main - prints name of the file
-* @argc: counts arg
-* @argv: name of the arguments
 * Return: name of the file
 */
-int main(int argc, char *argv[]) 
+int main(void)
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", __FILE__);
 	return (0);
 }
