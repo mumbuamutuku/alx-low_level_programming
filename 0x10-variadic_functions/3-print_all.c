@@ -41,16 +41,16 @@ void print_float(va_list args)
  * @format: is a list of types of arguments passed to the function
  *          c: char
  *          i: integer
- *          f: floats 
+ *          f: floats
  *          s: char * (if the string is NULL, print (nil) instead
  *          any other char should be ignored
  * Return: always 0 a success
  */
 void print_all(const char * const format, ...)
 {
-    va_list args;
+	va_list args;
 	char *sep;
-    print_form_t print_form[] = {
+	print_form_t print_form[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
