@@ -6,13 +6,16 @@
 */
 size_t print_list(const list_t *h)
 {
-    size_t i;
+	size_t i;
 
-    if (h == NULL)
-        return (0);
-    i = 1;
-    printf("[%d] %s\n", h->len, h->str);
-    if (h->next != NULL)
-        i += print_list(h->next);
-    return (i);    
+	if (h == NULL)
+		return (0);
+	i = 1;
+	if (h->str == NULL)
+		printf("[0] (nil)\n");
+	else
+		printf("[%d] %s\n", h->len, h->str);
+	if (h->next != NULL)
+		i += print_list(h->next);
+	return (i);
 }
