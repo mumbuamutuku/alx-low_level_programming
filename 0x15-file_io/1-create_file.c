@@ -9,10 +9,11 @@
 int create_file(const char *filename, char *text_content)
 {
 	int op, wr, len = 0;
+	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
 		return (-1);
-	op = open(filename, O_CREAT | O_RDONLY | O_TRUNC, 0600);
+	op = open(filename, O_CREAT | O_WRONLY | O_TRUNC, mode);
 	if (op == -1)
 		return (-1);
 	if (text_content != NULL)
@@ -21,8 +22,6 @@ int create_file(const char *filename, char *text_content)
 			len++;
 		write(op, text_content, len);
 	}
-	if (op == -1 || wr == -1)
-		return (-1);
 	wr = close(op);
 	if (wr == -1)
 		return (-1);
