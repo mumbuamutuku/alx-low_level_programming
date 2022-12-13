@@ -44,4 +44,17 @@ Create the dynamic library libdynamic.so containing all the functions listed bel
 <li> char *_strstr(char *haystack, char *needle); </li>
 </ul>
 
+1. Without libraries what have we? We have no past and no future
 
+**1-create_dynamic_lib.sh**: Bash script that creates a dynamic library called liball.so from all the .c files in the current directory.
+2. Let's call C functions from Python
+
+**100-operations.so**: C dynamic library containing basic C mathematical operation functions that can be called from Python.
+Includes:
+<ul><ul list-style-type: square>
+<li> int add(int a, int b); </li>
+<li> int sub(int a, int b); </li>
+<li> int mul(int a, int b); </li>
+<li> int div(int a, int b); </li>
+<li> int mod(int a, int b); </li>
+</ul></ul>
