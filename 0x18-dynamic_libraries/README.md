@@ -1,46 +1,47 @@
-0x18. C - Dynamic libraries
+<h1> 0x18. C - Dynamic libraries </h1>
 
-libdynamic.so, main.h
+**libdynamic.so, main.h**
 Create the dynamic library libdynamic.so containing all the functions listed below:
-int _putchar(char c);
+<ul>
+<li> int _putchar(char c); </li>
 
-int _islower(int c);
+<li> int _islower(int c); </li>
 
-int _isalpha(int c);
+<li> int _isalpha(int c); </li>
 
-int _abs(int n);
+<li> int _abs(int n); </li>
 
-int _isupper(int c);
+<li> int _isupper(int c); </li>
 
-int _isdigit(int c);
+<li> int _isdigit(int c); </li>
 
-int _strlen(char *s);
+<li> int _strlen(char *s); </li>
 
-void _puts(char *s);
+<li> void _puts(char *s); </li>
 
-char *_strcpy(char *dest, char *src);
+<li> char *_strcpy(char *dest, char *src); </li>
 
-int _atoi(char *s);
+<li> int _atoi(char *s); </li>
 
-char *_strcat(char *dest, char *src);
+<li> char *_strcat(char *dest, char *src); </li>
 
-char *_strncat(char *dest, char *src, int n);
+<li> char *_strncat(char *dest, char *src, int n); </li>
 
-char *_strncpy(char *dest, char *src, int n);
+<li> char *_strncpy(char *dest, char *src, int n); </li>
 
-int _strcmp(char *s1, char *s2);
+<li> int _strcmp(char *s1, char *s2); </li>
 
-char *_memset(char *s, char b, unsigned int n);
+<li> char *_memset(char *s, char b, unsigned int n); </li>
 
-char *_memcpy(char *dest, char *src, unsigned int n);
+<li> char *_memcpy(char *dest, char *src, unsigned int n); </li>
 
-char *_strchr(char *s, char c);
+<li> char *_strchr(char *s, char c); </li>
 
-unsigned int _strspn(char *s, char *accept);
+<li> unsigned int _strspn(char *s, char *accept); </li>
 
-char *_strpbrk(char *s, char *accept);
+<li> char *_strpbrk(char *s, char *accept); </li>
 
-char *_strstr(char *haystack, char *needle);
-
+<li> char *_strstr(char *haystack, char *needle); </li>
+</ul>
 
 
